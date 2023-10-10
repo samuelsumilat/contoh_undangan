@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="in">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    
+    <!--==================== TITLE =====================-->
+    <title>Wedding Invitations</title>
+    
+</head>
+
+<body onmousedown='return false' oncontexmenu='return false' onselectstart='return false'>
+    
+    <!--==================== NAVBAR =====================-->
+<div class="nav_container">
+    
+    <div class="navbar background_color">
+        
+         <a href="#beranda" class="menu">
+             <i class='bx bx-home nav_icon'></i>
+             <div class="nav_name">Beranda</div>
+         </a>
+     
+         <a href="#profil" class="menu">
+             <i class='bx bx-group nav_icon'></i>
+             <div class="nav_name">Profil</div>
+         </a>
+     
+         <a href="#acara" class="menu">
+             <i class='bx bx-calendar nav_icon'></i>
+             <div class="nav_name">Acara</div>
+         </a>
+     
+         <a href="#galeri" class="menu">
+             <i class='bx bx-image nav_icon'></i>
+             <div class="nav_name">Galeri</div>
+         </a>
+        
+         <a href="#cerita" class="menu">
+             <i class='bx bx-pen nav_icon'></i>
+             <div class="nav_name">Cerita</div>
+         </a>
+     
+         <a href="#gift" class="menu">
+             <i class='bx bx-gift nav_icon'></i>
+             <div class="nav_name">Gift</div>
+         </a>
+        
+         <a href="#ucapan" class="menu">
+             <i class='bx bx-chat nav_icon'></i>
+             <div class="nav_name">Ucapan</div>
+         </a>
+        
+    <!--==================== AUDIO PLAY BUTTON ====================-->
+         <audio id="track">
+             <source src="music.mp3" type="audio/mpeg"/>
+         </audio>
+     
+         <div class="player-container menu">
+             <div id="play-pause" class="pause">Play</div>
+         </div>
+    </div>
+</div>
+
+    <!--==================== POPUP ====================-->
+    <div class="popup">
+       <img src="" alt="">
+       <button class="close text_popup background_color1"><i>Buka Undangan</i></button>
+    </div>
+    
+    <!--==================== MAIN ====================-->
+<div class="container">
+        <section class="wrap1 background_color1" id="beranda">
+            <div>
+                <h1 class="text1">Beranda</h1>
+            </div>
+        </section>
+        
+         <section class="wrap2 background_color2" id="profil">
+             <div>
+                 <h1 class="text2">Profil</h1>
+             </div>
+         </section>
+         
+         <section class="wrap2 background_color2" id="acara">
+             <div>
+                 <h1 class="text2">Acara</h1>
+             </div>
+         </section>
+         
+         <section class="wrap2 background_color2" id="galeri">
+             <div>
+                 <h1 class="text2">Galeri</h1>
+             </div>
+         </section>
+         
+         <section class="wrap2 background_color2" id="cerita">
+             <div>
+                 <h1 class="text2">Cerita</h1>
+             </div>
+         </section>
+         
+         <section class="wrap2 background_color2" id="gift">
+             <div>
+                 <h1 class="text2">Gift</h1>
+             </div>
+         </section>
+         
+         <section class="wrap2 background_color2" id="ucapan">
+             <div>
+                 <h1 class="text2">Ucapan</h1>
+             </div>
+         </section>
+</div>
+
+    <style>
+/*==================== POPUP CSS ====================*/
+.popup{
+    background-color: black;
+    color: white;
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;            
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+        
+.popup button{
+    position: absolute;
+    width: 30vh;
+    height: 6vh;
+    font-size: 3vh;
+    border-radius: 30%;
+    font-weight: bolder;
+    border-style: none;
+}
+
+.text_popup{
+    font-family: Times New Roman, serif;
+    text-align: center;
+}
+*, html{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: black;
+}
+
+body{
+    margin: auto;
+}
+
+/*==================== TEKS ====================*/
+.text1, .text2{
+    font-family: Times New Roman, serif;
+    text-align: center;
+    font-style: italic;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    font-size: 5vh;
+    z-index: 2;
+}
+
+/*==================== WARNA ====================*/
+.background_color{
+    background-color: #ffffff;
+}
+
+.navbar .menu{
+    color: #808080;
+}
+
+.background_color1{
+    background-color: #f3f4f5;
+    color: #303030;
+}
+
+.background_color2{
+    background-color: #d8e1e6;
+    color: #002844;
+}
+
+.text_color2, .navbar a:hover{
+    color: ##647796;
+}
+
+.text_color1{
+    color: #627075;
+}
+
+/*==================== PLAY BUTTON ====================*/
+#play-pause {
+    cursor: pointer;
+    text-indent: -999999px;
+    width: 15px;
+    height: 15px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMiAyNHYtMjRsMjAgMTItMjAgMTJ6Ii8+PC9zdmc+);
+    background-repeat: no-repeat!important;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size: 30% 90%;
+    padding: 10%;
+    border-radius: 50%;
+    border: 3px Solid;
+}
+
+.play {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMiAyNHYtMjRsMjAgMTItMjAgMTJ6Ii8+PC9zdmc+);
+}
+
+.pause {
+   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTAgMjRoLTZ2LTI0aDZ2MjR6bTEwLTI0aC02djI0aDZ2LTI0eiIvPjwvc3ZnPg==)!important;
+}
+
+.play, .pause{
+    background-color: #d8e1e6;
+}
+
+/*==================== NAVBAR ====================*/
+.nav_container{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+  overflow: hidden;
+  box-shadow: 0px -5px 5px rgba(0,0,0,0.1);
+  position: fixed;
+  display: flex;
+  width: 100%;
+  max-width: 810px;
+  height: auto;
+  max-height: 100px;
+  bottom: 0;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+}
+
+.navbar .menu {
+  /* float: left; */  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.menu{
+    width: 12%;
+    height: 100%;    
+}
+
+.nav_icon{
+  font-size: 150%;
+  padding-top: 5px;
+}
+
+.nav_name{
+  font-size: 50%;
+  padding-bottom: 5px;
+}
+
+/*==================== RESPONSIVE ====================*/
+@media(max-width: 320px){
+   .nav_name{
+       display: none;
+   }
+   .nav_icon{
+       font-size: 20px;
+       padding-bottom: 5px;
+   }
+}
+
+@media(min-width: 768px){
+    .nav_name{
+        font-size: 1.5rem;
+    }
+    .nav_icon{
+        font-size: 4rem;
+    }
+    #play-pause {
+    width: 40px;
+    height: 40px;
+    }
+}
+
+@media(min-width: 1024px){
+    .nav_name{
+        font-size: 30px;
+        padding-top: 5px;
+    }
+    .nav_icon{
+        display: none;
+    }
+        #play-pause {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.container{
+    overflow: hidden;
+    max-width: 1024px;
+    display: grid;
+    margin: auto;
+}
+
+.wrap1{
+    width: 100%;
+    height: 100vh;
+}
+
+.wrap2{
+    width: 100%;
+    height: 100vh;
+}
+
+    </style>
+
+    <!--==================== SCRIPT ====================-->
+    <script>
+    /*==================== POPUP & PLAY BUTTON (Javascript) ====================*/
+var track = document.getElementById('track');
+document.querySelector(".close").addEventListener("click", function(){
+    document.querySelector(".popup").style.display = "none";
+    track.play();
+    var targetElemen = document.getElementById("beranda");
+    targetElemen.scrollIntoView();
+});
+
+var track = document.getElementById('track');
+
+var controlBtn = document.getElementById('play-pause');
+
+function playPause() {
+    if (track.paused) {
+        track.play();
+        //controlBtn.textContent = "Pause";
+        controlBtn.className = "pause";
+    } else { 
+        track.pause();
+         //controlBtn.textContent = "Play";
+        controlBtn.className = "play";
+    }
+}
+
+controlBtn.addEventListener("click", playPause);
+track.addEventListener("ended", function() {
+  controlBtn.className = "play";
+});
+    </script>
+
+</body>
+</html>
+
+
